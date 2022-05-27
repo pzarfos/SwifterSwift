@@ -573,15 +573,14 @@ public extension UIView {
 public extension UIView {
     /// SwifterSwift: Anchor all sides of the view into it's superview.
     func fillToSuperview() {
-        // https://videos.letsbuildthatapp.com/
+        guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
-        if let superview = superview {
-            let left = leftAnchor.constraint(equalTo: superview.leftAnchor)
-            let right = rightAnchor.constraint(equalTo: superview.rightAnchor)
-            let top = topAnchor.constraint(equalTo: superview.topAnchor)
-            let bottom = bottomAnchor.constraint(equalTo: superview.bottomAnchor)
-            NSLayoutConstraint.activate([left, right, top, bottom])
-        }
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        ])
     }
 
     /// SwifterSwift: Add anchors from any side of the current view into the specified anchors and returns the newly added constraints.
