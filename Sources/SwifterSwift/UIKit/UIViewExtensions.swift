@@ -508,23 +508,6 @@ public extension UIView {
         motionEffects.removeAll()
     }
 
-    /// SwifterSwift: Search all superviews until a view with the condition is found.
-    ///
-    /// - Parameter predicate: predicate to evaluate on superviews.
-    func ancestorView(where predicate: (UIView?) -> Bool) -> UIView? {
-        if predicate(superview) {
-            return superview
-        }
-        return superview?.ancestorView(where: predicate)
-    }
-
-    /// SwifterSwift: Search all superviews until a view with this class is found.
-    ///
-    /// - Parameter name: class of the view to search.
-    func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
-        return ancestorView(where: { $0 is T }) as? T
-    }
-
     /// SwifterSwift: Add array of subviews to view.
     ///
     /// - Parameter subviews: array of subviews to add to self.
@@ -535,6 +518,30 @@ public extension UIView {
     /// SwifterSwift: Remove all subviews in view.
     func removeSubviews() {
         subviews.forEach { $0.removeFromSuperview() }
+    }
+
+    /// SwifterSwift: Search all superviews until a view with the condition is found.
+    ///
+    /// - Parameter predicate: predicate to evaluate on superviews.
+    func superview(where predicate: (UIView?) -> Bool) -> UIView? {
+        if predicate(superview) {
+            return superview
+        }
+        return superview?.superview(where: predicate)
+    }
+
+    /// SwifterSwift: Search all superviews until a view with this class is found.
+    ///
+    ///     func textFieldDidBeginEditing(_ textField: UITextField) {
+    ///         // Get the cell containing the textfield.
+    ///         if let cell = textField.superview(withClass: TextFieldTableViewCell.self) {
+    ///             cell.toggle(isHighlighted: true)
+    ///         }
+    ///     }
+    ///
+    /// - Parameter name: class of the view to search.
+    func superview<T: UIView>(withClass _: T.Type) -> T? {
+        return superview(where: { $0 is T }) as? T
     }
 
     /// SwifterSwift: Returns all the subviews of a given type recursively in the
