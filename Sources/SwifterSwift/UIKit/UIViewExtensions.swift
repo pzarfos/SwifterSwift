@@ -487,6 +487,27 @@ public extension UIView {
         layer.addSublayer(gradientLayer)
     }
 
+    /// SwifterSwift: Add motion effects for the view
+    func addParalax(amount: CGFloat) {
+        motionEffects.removeAll()
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -amount
+        horizontal.maximumRelativeValue = amount
+
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -amount
+        vertical.maximumRelativeValue = amount
+
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontal, vertical]
+        self.addMotionEffect(group)
+    }
+
+    /// SwifterSwift: Remove all motion effects for the view
+    func removeParalax() {
+        motionEffects.removeAll()
+    }
+
     /// SwifterSwift: Search all superviews until a view with the condition is found.
     ///
     /// - Parameter predicate: predicate to evaluate on superviews.
@@ -515,7 +536,7 @@ public extension UIView {
     func removeSubviews() {
         subviews.forEach { $0.removeFromSuperview() }
     }
-    
+
     /// SwifterSwift: Returns all the subviews of a given type recursively in the
     /// view hierarchy rooted on the view it its called.
     ///
