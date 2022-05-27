@@ -100,16 +100,6 @@ public extension UIView {
         }
     }
 
-    /// SwifterSwift: Height of view.
-    var height: CGFloat {
-        get {
-            return frame.size.height
-        }
-        set {
-            frame.size.height = newValue
-        }
-    }
-
     /// SwifterSwift: Check if view is in RTL format.
     var isRightToLeft: Bool {
         if #available(iOS 10.0, macCatalyst 13.0, tvOS 10.0, *) {
@@ -207,16 +197,6 @@ public extension UIView {
         return nil
     }
 
-    /// SwifterSwift: Width of view.
-    var width: CGFloat {
-        get {
-            return frame.size.width
-        }
-        set {
-            frame.size.width = newValue
-        }
-    }
-
     /// SwifterSwift: x origin of view.
     var x: CGFloat {
         get {
@@ -234,6 +214,26 @@ public extension UIView {
         }
         set {
             frame.origin.y = newValue
+        }
+    }
+
+    /// SwifterSwift: Width of view.
+    var width: CGFloat {
+        get {
+            return frame.size.width
+        }
+        set {
+            frame.size.width = newValue
+        }
+    }
+
+    /// SwifterSwift: Height of view.
+    var height: CGFloat {
+        get {
+            return frame.size.height
+        }
+        set {
+            frame.size.height = newValue
         }
     }
 }
