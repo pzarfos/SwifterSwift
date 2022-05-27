@@ -113,6 +113,16 @@ public extension UIView {
         }
     }
 
+    /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
+    @IBInspectable var masksToBounds: Bool {
+        get {
+            return layer.masksToBounds
+        }
+        set {
+            layer.masksToBounds = newValue
+        }
+    }
+
     /// SwifterSwift: Border color of view; also inspectable from Storyboard.
     @IBInspectable var layerBorderColor: UIColor? {
         get {
@@ -189,16 +199,6 @@ public extension UIView {
         }
         set {
             layer.shadowRadius = newValue
-        }
-    }
-
-    /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
-    @IBInspectable var masksToBounds: Bool {
-        get {
-            return layer.masksToBounds
-        }
-        set {
-            layer.masksToBounds = newValue
         }
     }
 
