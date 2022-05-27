@@ -67,7 +67,7 @@ public extension CGRect {
             return
         }
 
-        self = CGRect.init(x: origin.x, y: origin.y, width: width, height: height)
+        self = CGRect(x: origin.x, y: origin.y, width: width, height: height)
     }
 
     /// SwifterSwift: set CGRect height value
@@ -76,7 +76,7 @@ public extension CGRect {
             return
         }
 
-        self = CGRect.init(x: origin.x, y: origin.y, width: width, height: height)
+        self = CGRect(x: origin.x, y: origin.y, width: width, height: height)
     }
 
     /// SwifterSwift: Create a new `CGRect` by resizing with specified anchor.
