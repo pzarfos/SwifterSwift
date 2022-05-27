@@ -266,8 +266,9 @@ public extension UIView {
         let maskPath = UIBezierPath(
             roundedRect: bounds,
             byRoundingCorners: corners,
-            cornerRadii: CGSize(width: radius, height: radius))
-
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        
         let shape = CAShapeLayer()
         shape.path = maskPath.cgPath
         layer.mask = shape
