@@ -31,10 +31,13 @@ public extension WKWebView {
 // MARK: - PDF
 
 public extension WKWebView {
-    /// SwifterSwift: Call this function when WKWebView finish loading
+    /// SwifterSwift: Create PDF from WKWebView, Call this function when WKWebView finish loading
     ///
     ///     let pdfFilePath = self.webView.exportAsPdfFromWebView()
+    ///     print(pdfFilePath)
+    ///
     func exportAsPdfFromWebView() -> String {
+        // <https://www.swiftdevcenter.com/create-pdf-from-uiview-wkwebview-and-uitableview/>
         let pdfData = createPdfFile(printFormatter: self.viewPrintFormatter())
         return self.saveWebViewPdf(data: pdfData)
     }

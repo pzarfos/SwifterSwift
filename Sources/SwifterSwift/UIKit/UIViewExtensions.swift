@@ -786,7 +786,10 @@ public extension UIView {
     /// SwifterSwift: Export pdf from Save pdf in drectory and return pdf file path
     ///
     ///     let pdfFilePath = self.view.exportAsPdfFromView()
+    ///     print(pdfFilePath)
+    ///
     func exportAsPdfFromView() -> String {
+        // <https://www.swiftdevcenter.com/create-pdf-from-uiview-wkwebview-and-uitableview/>
         let pdfPageFrame = self.bounds
         let pdfData = NSMutableData()
         UIGraphicsBeginPDFContextToData(pdfData, pdfPageFrame, nil)
