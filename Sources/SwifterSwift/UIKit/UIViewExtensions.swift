@@ -296,18 +296,6 @@ public extension UIView {
         layer.masksToBounds = false
     }
 
-    /// SwifterSwift: Add array of subviews to view.
-    ///
-    /// - Parameter subviews: array of subviews to add to self.
-    func addSubviews(_ subviews: [UIView]) {
-        subviews.forEach { addSubview($0) }
-    }
-
-    /// SwifterSwift: Remove all subviews in view.
-    func removeSubviews() {
-        subviews.forEach { $0.removeFromSuperview() }
-    }
-
     /// SwifterSwift: Fade in view.
     ///
     /// - Parameters:
@@ -515,7 +503,19 @@ public extension UIView {
     func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
         return ancestorView(where: { $0 is T }) as? T
     }
-  
+
+    /// SwifterSwift: Add array of subviews to view.
+    ///
+    /// - Parameter subviews: array of subviews to add to self.
+    func addSubviews(_ subviews: [UIView]) {
+        subviews.forEach { addSubview($0) }
+    }
+
+    /// SwifterSwift: Remove all subviews in view.
+    func removeSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+    
     /// SwifterSwift: Returns all the subviews of a given type recursively in the
     /// view hierarchy rooted on the view it its called.
     ///
