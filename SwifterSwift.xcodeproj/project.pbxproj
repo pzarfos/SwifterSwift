@@ -361,6 +361,7 @@
 		2141A354235F37C200218109 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2141A351235F379600218109 /* TestHelpers.swift */; };
 		22CADFFC2840BE1F007CF73F /* UIPrintPageRendererExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CADFFB2840BE1F007CF73F /* UIPrintPageRendererExtensions.swift */; };
 		22CADFFE2840C023007CF73F /* UIVisualEffectViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CADFFD2840C022007CF73F /* UIVisualEffectViewExtensions.swift */; };
+		22CAE0002840C192007CF73F /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CADFFF2840C192007CF73F /* NSLayoutConstraintExtensions.swift */; };
 		278CA08D1F9A9232004918BD /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA08C1F9A9232004918BD /* NSImageExtensions.swift */; };
 		278CA0911F9A9679004918BD /* NSImageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */; };
 		42F53FEC2039C5AC0070DC11 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */; };
@@ -818,6 +819,7 @@
 		2141A351235F379600218109 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		22CADFFB2840BE1F007CF73F /* UIPrintPageRendererExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPrintPageRendererExtensions.swift; sourceTree = "<group>"; };
 		22CADFFD2840C022007CF73F /* UIVisualEffectViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewExtensions.swift; sourceTree = "<group>"; };
+		22CADFFF2840C192007CF73F /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
 		278CA08C1F9A9232004918BD /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensionsTests.swift; sourceTree = "<group>"; };
 		42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
@@ -1133,6 +1135,7 @@
 				58253511259CF23B00407B78 /* MeasurementExtensions.swift */,
 				F87AA5D4241257E3005F5B28 /* NotificationCenterExtensions.swift */,
 				07B7F1621F5EB41600E6F910 /* NSAttributedStringExtensions.swift */,
+				22CADFFF2840C192007CF73F /* NSLayoutConstraintExtensions.swift */,
 				9D4914821F85138E00F3868F /* NSPredicateExtensions.swift */,
 				F8C1AE6E225B7F990045D5A0 /* NSRegularExpressionExtensions.swift */,
 				07B7F1781F5EB41600E6F910 /* URLExtensions.swift */,
@@ -2025,6 +2028,7 @@
 				076AEC891FDB48580077D153 /* UIDatePickerExtensions.swift in Sources */,
 				9D806A6A2258DC3E008E500A /* SCNShapeExtensions.swift in Sources */,
 				F854D2A52423AE92003A08A9 /* CGAffineTransformExtensions.swift in Sources */,
+				22CAE0002840C192007CF73F /* NSLayoutConstraintExtensions.swift in Sources */,
 				07B7F2301F5EB45100E6F910 /* CGPointExtensions.swift in Sources */,
 				664CB96D2171863B00FC87B4 /* BidirectionalCollectionExtensions.swift in Sources */,
 				07B7F1951F5EB42000E6F910 /* UICollectionViewExtensions.swift in Sources */,
