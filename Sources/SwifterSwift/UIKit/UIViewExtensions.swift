@@ -62,6 +62,57 @@ public extension UIView {
 // MARK: - Properties
 
 public extension UIView {
+    /// SwifterSwift: x origin of view.
+    var x: CGFloat {
+        get {
+            return frame.origin.x
+        }
+        set {
+            frame.origin.x = newValue
+        }
+    }
+
+    /// SwifterSwift: y origin of view.
+    var y: CGFloat {
+        get {
+            return frame.origin.y
+        }
+        set {
+            frame.origin.y = newValue
+        }
+    }
+
+    /// SwifterSwift: Width of view.
+    var width: CGFloat {
+        get {
+            return frame.size.width
+        }
+        set {
+            frame.size.width = newValue
+        }
+    }
+
+    /// SwifterSwift: Height of view.
+    var height: CGFloat {
+        get {
+            return frame.size.height
+        }
+        set {
+            frame.size.height = newValue
+        }
+    }
+
+    /// SwifterSwift: Size of view.
+    var size: CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            width = newValue.width
+            height = newValue.height
+        }
+    }
+
     /// SwifterSwift: Border color of view; also inspectable from Storyboard.
     @IBInspectable var layerBorderColor: UIColor? {
         get {
@@ -98,29 +149,6 @@ public extension UIView {
             layer.masksToBounds = true
             layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
         }
-    }
-
-    /// SwifterSwift: Check if view is in RTL format.
-    var isRightToLeft: Bool {
-        if #available(iOS 10.0, macCatalyst 13.0, tvOS 10.0, *) {
-            return effectiveUserInterfaceLayoutDirection == .rightToLeft
-        } else {
-            return false
-        }
-    }
-
-    /// SwifterSwift: Check if view has super view
-    var hasSuperview: Bool { superview != nil }
-
-    /// SwifterSwift: Take screenshot of view (if applicable).
-    var screenshot: UIImage? {
-        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        layer.render(in: context)
-        return UIGraphicsGetImageFromCurrentImageContext()
     }
 
     /// SwifterSwift: Shadow color of view; also inspectable from Storyboard.
@@ -174,17 +202,6 @@ public extension UIView {
         }
     }
 
-    /// SwifterSwift: Size of view.
-    var size: CGSize {
-        get {
-            return frame.size
-        }
-        set {
-            width = newValue.width
-            height = newValue.height
-        }
-    }
-
     /// SwifterSwift: Get view's parent view controller
     var parentViewController: UIViewController? {
         weak var parentResponder: UIResponder? = self
@@ -197,44 +214,27 @@ public extension UIView {
         return nil
     }
 
-    /// SwifterSwift: x origin of view.
-    var x: CGFloat {
-        get {
-            return frame.origin.x
-        }
-        set {
-            frame.origin.x = newValue
-        }
-    }
-
-    /// SwifterSwift: y origin of view.
-    var y: CGFloat {
-        get {
-            return frame.origin.y
-        }
-        set {
-            frame.origin.y = newValue
+    /// SwifterSwift: Check if view is in RTL format.
+    var isRightToLeft: Bool {
+        if #available(iOS 10.0, macCatalyst 13.0, tvOS 10.0, *) {
+            return effectiveUserInterfaceLayoutDirection == .rightToLeft
+        } else {
+            return false
         }
     }
 
-    /// SwifterSwift: Width of view.
-    var width: CGFloat {
-        get {
-            return frame.size.width
-        }
-        set {
-            frame.size.width = newValue
-        }
-    }
+    /// SwifterSwift: Check if view has super view
+    var hasSuperview: Bool { superview != nil }
 
-    /// SwifterSwift: Height of view.
-    var height: CGFloat {
-        get {
-            return frame.size.height
+    /// SwifterSwift: Take screenshot of view (if applicable).
+    var screenshot: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
+        defer {
+            UIGraphicsEndImageContext()
         }
-        set {
-            frame.size.height = newValue
-        }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        layer.render(in: context)
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
 
