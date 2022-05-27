@@ -268,7 +268,7 @@ public extension UIView {
             byRoundingCorners: corners,
             cornerRadii: CGSize(width: radius, height: radius)
         )
-        
+
         let shape = CAShapeLayer()
         shape.path = maskPath.cgPath
         layer.mask = shape
@@ -303,6 +303,11 @@ public extension UIView {
         subviews.forEach { addSubview($0) }
     }
 
+    /// SwifterSwift: Remove all subviews in view.
+    func removeSubviews() {
+        subviews.forEach { $0.removeFromSuperview() }
+    }
+
     /// SwifterSwift: Fade in view.
     ///
     /// - Parameters:
@@ -331,40 +336,6 @@ public extension UIView {
         }, completion: completion)
     }
 
-    /// SwifterSwift: Load view from nib.
-    ///
-    /// - Parameters:
-    ///   - name: nib name.
-    ///   - bundle: bundle of nib (default is nil).
-    /// - Returns: optional UIView (if applicable).
-    class func loadFromNib(named name: String, bundle: Bundle? = nil) -> UIView? {
-        return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
-    }
-
-    /// SwifterSwift: Load view of a certain type from nib
-    ///
-    /// - Parameters:
-    ///   - withClass: UIView type.
-    ///   - bundle: bundle of nib (default is nil).
-    /// - Returns: UIView
-    class func loadFromNib<T: UIView>(withClass name: T.Type, bundle: Bundle? = nil) -> T {
-        let named = String(describing: name)
-        guard let view = UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? T else {
-            fatalError("First element in xib file \(named) is not of type \(named)")
-        }
-        return view
-    }
-
-    /// SwifterSwift: Remove all subviews in view.
-    func removeSubviews() {
-        subviews.forEach { $0.removeFromSuperview() }
-    }
-
-    /// SwifterSwift: Remove all gesture recognizers from view.
-    func removeGestureRecognizers() {
-        gestureRecognizers?.forEach(removeGestureRecognizer)
-    }
-
     /// SwifterSwift: Attaches gesture recognizers to the view. Attaching gesture recognizers to a view defines the scope of the represented gesture, causing it to receive touches hit-tested to that view and all of its subviews. The view establishes a strong reference to the gesture recognizers.
     ///
     /// - Parameter gestureRecognizers: The array of gesture recognizers to be added to the view.
@@ -381,6 +352,11 @@ public extension UIView {
         for recognizer in gestureRecognizers {
             removeGestureRecognizer(recognizer)
         }
+    }
+
+    /// SwifterSwift: Remove all gesture recognizers from view.
+    func removeGestureRecognizers() {
+        gestureRecognizers?.forEach(removeGestureRecognizer)
     }
 
     /// SwifterSwift: Rotate view by angle on relative axis.
@@ -523,26 +499,78 @@ public extension UIView {
         layer.addSublayer(gradientLayer)
     }
 
-    /// SwifterSwift: Add Visual Format constraints.
+    /// SwifterSwift: Search all superviews until a view with the condition is found.
     ///
-    /// - Parameters:
-    ///   - withFormat: visual Format language.
-    ///   - views: array of views which will be accessed starting with index 0 (example: [v0], [v1], [v2]..).
-    func addConstraints(withFormat: String, views: UIView...) {
-        // https://videos.letsbuildthatapp.com/
-        var viewsDictionary: [String: UIView] = [:]
-        for (index, view) in views.enumerated() {
-            let key = "v\(index)"
-            view.translatesAutoresizingMaskIntoConstraints = false
-            viewsDictionary[key] = view
+    /// - Parameter predicate: predicate to evaluate on superviews.
+    func ancestorView(where predicate: (UIView?) -> Bool) -> UIView? {
+        if predicate(superview) {
+            return superview
         }
-        addConstraints(NSLayoutConstraint.constraints(
-            withVisualFormat: withFormat,
-            options: NSLayoutConstraint.FormatOptions(),
-            metrics: nil,
-            views: viewsDictionary))
+        return superview?.ancestorView(where: predicate)
     }
 
+    /// SwifterSwift: Search all superviews until a view with this class is found.
+    ///
+    /// - Parameter name: class of the view to search.
+    func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
+        return ancestorView(where: { $0 is T }) as? T
+    }
+  
+    /// SwifterSwift: Returns all the subviews of a given type recursively in the
+    /// view hierarchy rooted on the view it its called.
+    ///
+    /// - Parameter ofType: Class of the view to search.
+    /// - Returns: All subviews with a specified type.
+    func subviews<T>(ofType _: T.Type) -> [T] {
+        var views = [T]()
+        for subview in subviews {
+            if let view = subview as? T {
+                views.append(view)
+            } else if !subview.subviews.isEmpty {
+                views.append(contentsOf: subview.subviews(ofType: T.self))
+            }
+        }
+        return views
+    }
+}
+
+// MARK: - Initializers
+
+public extension UIView {
+    /// SwifterSwift: Initialize view with background color
+    convenience init(backgroundColor color: UIColor) {
+        self.init()
+        backgroundColor = color
+    }
+
+    /// SwifterSwift: Load view from nib.
+    ///
+    /// - Parameters:
+    ///   - name: nib name.
+    ///   - bundle: bundle of nib (default is nil).
+    /// - Returns: optional UIView (if applicable).
+    class func loadFromNib(named name: String, bundle: Bundle? = nil) -> UIView? {
+        return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
+    }
+
+    /// SwifterSwift: Load view of a certain type from nib
+    ///
+    /// - Parameters:
+    ///   - withClass: UIView type.
+    ///   - bundle: bundle of nib (default is nil).
+    /// - Returns: UIView
+    class func loadFromNib<T: UIView>(withClass name: T.Type, bundle: Bundle? = nil) -> T {
+        let named = String(describing: name)
+        guard let view = UINib(nibName: named, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? T else {
+            fatalError("First element in xib file \(named) is not of type \(named)")
+        }
+        return view
+    }
+}
+
+// MARK: - Constraints
+
+public extension UIView {
     /// SwifterSwift: Anchor all sides of the view into it's superview.
     func fillToSuperview() {
         // https://videos.letsbuildthatapp.com/
@@ -645,54 +673,26 @@ public extension UIView {
         anchorCenterYToSuperview()
     }
 
-    /// SwifterSwift: Search all superviews until a view with the condition is found.
+    /// SwifterSwift: Add Visual Format constraints.
     ///
-    /// - Parameter predicate: predicate to evaluate on superviews.
-    func ancestorView(where predicate: (UIView?) -> Bool) -> UIView? {
-        if predicate(superview) {
-            return superview
+    /// - Parameters:
+    ///   - withFormat: visual Format language.
+    ///   - views: array of views which will be accessed starting with index 0 (example: [v0], [v1], [v2]..).
+    func addConstraints(withFormat: String, views: UIView...) {
+        // https://videos.letsbuildthatapp.com/
+        var viewsDictionary: [String: UIView] = [:]
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
         }
-        return superview?.ancestorView(where: predicate)
+        addConstraints(NSLayoutConstraint.constraints(
+            withVisualFormat: withFormat,
+            options: NSLayoutConstraint.FormatOptions(),
+            metrics: nil,
+            views: viewsDictionary))
     }
 
-    /// SwifterSwift: Search all superviews until a view with this class is found.
-    ///
-    /// - Parameter name: class of the view to search.
-    func ancestorView<T: UIView>(withClass _: T.Type) -> T? {
-        return ancestorView(where: { $0 is T }) as? T
-    }
-  
-    /// SwifterSwift: Returns all the subviews of a given type recursively in the
-    /// view hierarchy rooted on the view it its called.
-    ///
-    /// - Parameter ofType: Class of the view to search.
-    /// - Returns: All subviews with a specified type.
-    func subviews<T>(ofType _: T.Type) -> [T] {
-        var views = [T]()
-        for subview in subviews {
-            if let view = subview as? T {
-                views.append(view)
-            } else if !subview.subviews.isEmpty {
-                views.append(contentsOf: subview.subviews(ofType: T.self))
-            }
-        }
-        return views
-    }
-}
-
-// MARK: - Initializers
-
-public extension UIView {
-    /// SwifterSwift: Initialize view with background color
-    convenience init(backgroundColor color: UIColor) {
-        self.init()
-        backgroundColor = color
-    }
-}
-
-// MARK: - Constraints
-
-public extension UIView {
     /// SwifterSwift: Search constraints until we find one for the given view
     /// and attribute. This will enumerate ancestors since constraints are
     /// always added to the common ancestor.
