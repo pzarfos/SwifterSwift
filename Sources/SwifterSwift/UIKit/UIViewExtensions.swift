@@ -223,6 +223,15 @@ public extension UIView {
         }
     }
 
+    /// SwifterSwift: Check if view is in LTR format.
+    var isLeftToRight: Bool {
+        if #available(iOS 10.0, macCatalyst 13.0, tvOS 10.0, *) {
+            return effectiveUserInterfaceLayoutDirection == .leftToRight
+        } else {
+            return false
+        }
+    }
+
     /// SwifterSwift: Check if view has super view
     var hasSuperview: Bool { superview != nil }
 
