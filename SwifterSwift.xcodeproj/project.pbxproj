@@ -1298,8 +1298,8 @@
 				07B7F15D1F5EB41600E6F910 /* CGColorExtensions.swift */,
 				07B7F15E1F5EB41600E6F910 /* CGFloatExtensions.swift */,
 				07B7F15F1F5EB41600E6F910 /* CGPointExtensions.swift */,
-				07B7F1601F5EB41600E6F910 /* CGSizeExtensions.swift */,
 				116090AE24187D5C00DDCD01 /* CGRectExtensions.swift */,
+				07B7F1601F5EB41600E6F910 /* CGSizeExtensions.swift */,
 				734307F72108C2240029CD16 /* CGVectorExtensions.swift */,
 			);
 			path = CoreGraphics;
