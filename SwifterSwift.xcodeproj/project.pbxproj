@@ -366,6 +366,10 @@
 		22CAE00328413A44007CF73F /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00128413A44007CF73F /* NotificationExtensions.swift */; };
 		22CAE00428413A44007CF73F /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00128413A44007CF73F /* NotificationExtensions.swift */; };
 		22CAE00528413A44007CF73F /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00128413A44007CF73F /* NotificationExtensions.swift */; };
+		22CAE00728413D26007CF73F /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00628413D26007CF73F /* NSErrorExtensions.swift */; };
+		22CAE00828413D26007CF73F /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00628413D26007CF73F /* NSErrorExtensions.swift */; };
+		22CAE00928413D26007CF73F /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00628413D26007CF73F /* NSErrorExtensions.swift */; };
+		22CAE00A28413D26007CF73F /* NSErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE00628413D26007CF73F /* NSErrorExtensions.swift */; };
 		278CA08D1F9A9232004918BD /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA08C1F9A9232004918BD /* NSImageExtensions.swift */; };
 		278CA0911F9A9679004918BD /* NSImageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */; };
 		42F53FEC2039C5AC0070DC11 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */; };
@@ -825,6 +829,7 @@
 		22CADFFD2840C022007CF73F /* UIVisualEffectViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewExtensions.swift; sourceTree = "<group>"; };
 		22CADFFF2840C192007CF73F /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
 		22CAE00128413A44007CF73F /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
+		22CAE00628413D26007CF73F /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
 		278CA08C1F9A9232004918BD /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensionsTests.swift; sourceTree = "<group>"; };
 		42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
@@ -1013,11 +1018,14 @@
 				07B7F1681F5EB41600E6F910 /* CharacterExtensions.swift */,
 				07B7F1691F5EB41600E6F910 /* CollectionExtensions.swift */,
 				7832C2AE209BB19300224EED /* ComparableExtensions.swift */,
+				D951E8A923D04DBE00F2CD0B /* DecodableExtensions.swift */,
 				07B7F16E1F5EB41600E6F910 /* DictionaryExtensions.swift */,
 				07B7F16F1F5EB41600E6F910 /* DoubleExtensions.swift */,
 				07B7F1701F5EB41600E6F910 /* FloatExtensions.swift */,
 				07B7F1711F5EB41600E6F910 /* FloatingPointExtensions.swift */,
 				07B7F1721F5EB41600E6F910 /* IntExtensions.swift */,
+				C7E027C32360942000F1061E /* KeyedDecodingContainerExtensions.swift */,
+				B2A0DABF2336DA87002B0BC5 /* MutableCollectionExtensions.swift */,
 				07B7F1741F5EB41600E6F910 /* OptionalExtensions.swift */,
 				B22EB2B620E9E720001EAE70 /* RangeReplaceableCollectionExtensions.swift */,
 				18C8E5DD2074C58100F8AF51 /* SequenceExtensions.swift */,
@@ -1025,9 +1033,6 @@
 				07B7F1761F5EB41600E6F910 /* SignedNumericExtensions.swift */,
 				07B7F1771F5EB41600E6F910 /* StringExtensions.swift */,
 				9D9784DA1FCAE3D200D988E7 /* StringProtocolExtensions.swift */,
-				B2A0DABF2336DA87002B0BC5 /* MutableCollectionExtensions.swift */,
-				C7E027C32360942000F1061E /* KeyedDecodingContainerExtensions.swift */,
-				D951E8A923D04DBE00F2CD0B /* DecodableExtensions.swift */,
 			);
 			path = SwiftStdlib;
 			sourceTree = "<group>";
@@ -1147,6 +1152,7 @@
 				07B7F1781F5EB41600E6F910 /* URLExtensions.swift */,
 				077BA0891F6BE81F00D9C4AC /* URLRequestExtensions.swift */,
 				077BA08E1F6BE83600D9C4AC /* UserDefaultsExtensions.swift */,
+				22CAE00628413D26007CF73F /* NSErrorExtensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -2099,6 +2105,7 @@
 				07B7F19E1F5EB42000E6F910 /* UISegmentedControlExtensions.swift in Sources */,
 				07B7F20F1F5EB43C00E6F910 /* DataExtensions.swift in Sources */,
 				0DAEBCE024B0045F00F61684 /* HKActivitySummaryExtensions.swift in Sources */,
+				22CAE00728413D26007CF73F /* NSErrorExtensions.swift in Sources */,
 				07B7F19C1F5EB42000E6F910 /* UINavigationItemExtensions.swift in Sources */,
 				9D806A5B2258D2B8008E500A /* SCNMaterialExtensions.swift in Sources */,
 				F87AA5D5241257E3005F5B28 /* NotificationCenterExtensions.swift in Sources */,
@@ -2152,6 +2159,7 @@
 				9D806A752258E0D8008E500A /* SCNConeExtensions.swift in Sources */,
 				07B7F1BA1F5EB42000E6F910 /* UITextFieldExtensions.swift in Sources */,
 				07B7F1F91F5EB43C00E6F910 /* ArrayExtensions.swift in Sources */,
+				22CAE00828413D26007CF73F /* NSErrorExtensions.swift in Sources */,
 				07B7F1B61F5EB42000E6F910 /* UIStoryboardExtensions.swift in Sources */,
 				07B7F1B01F5EB42000E6F910 /* UINavigationBarExtensions.swift in Sources */,
 				07B7F1AA1F5EB42000E6F910 /* UIButtonExtensions.swift in Sources */,
@@ -2302,6 +2310,7 @@
 				07B7F1CA1F5EB42200E6F910 /* UISegmentedControlExtensions.swift in Sources */,
 				07B7F1EB1F5EB43B00E6F910 /* DataExtensions.swift in Sources */,
 				664CB96F2171863B00FC87B4 /* BidirectionalCollectionExtensions.swift in Sources */,
+				22CAE00928413D26007CF73F /* NSErrorExtensions.swift in Sources */,
 				07B7F1C81F5EB42200E6F910 /* UINavigationItemExtensions.swift in Sources */,
 				07B7F1D11F5EB42200E6F910 /* UITextViewExtensions.swift in Sources */,
 				F8C1AE71225B7F990045D5A0 /* NSRegularExpressionExtensions.swift in Sources */,
@@ -2371,6 +2380,7 @@
 				07B7F2201F5EB44600E6F910 /* CGColorExtensions.swift in Sources */,
 				0726D77C1F7C24840028CAB5 /* ColorExtensions.swift in Sources */,
 				07B7F1D51F5EB43B00E6F910 /* ArrayExtensions.swift in Sources */,
+				22CAE00A28413D26007CF73F /* NSErrorExtensions.swift in Sources */,
 				7832C2B2209BB19300224EED /* ComparableExtensions.swift in Sources */,
 				F8C1AE72225B7F990045D5A0 /* NSRegularExpressionExtensions.swift in Sources */,
 				B2A0DAC32336DA87002B0BC5 /* MutableCollectionExtensions.swift in Sources */,
