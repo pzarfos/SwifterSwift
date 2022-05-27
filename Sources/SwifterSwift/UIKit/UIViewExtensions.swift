@@ -679,6 +679,16 @@ public extension UIView {
     }
 }
 
+// MARK: - Initializers
+
+public extension UIView {
+    /// SwifterSwift: Initialize view with background color
+    convenience init(backgroundColor color: UIColor) {
+        self.init()
+        backgroundColor = color
+    }
+}
+
 // MARK: - Constraints
 
 public extension UIView {
