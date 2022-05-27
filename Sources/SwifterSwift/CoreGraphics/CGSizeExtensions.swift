@@ -3,7 +3,7 @@
 #if canImport(CoreGraphics)
 import CoreGraphics
 
-// MARK: - Methods
+// MARK: - Properties
 
 public extension CGSize {
     /// SwifterSwift: Returns the aspect ratio.
@@ -56,6 +56,16 @@ public extension CGSize {
         let aWidth = min(width * minRatio, boundingSize.width)
         let aHeight = min(height * minRatio, boundingSize.height)
         return CGSize(width: aWidth, height: aHeight)
+    }
+}
+
+// MARK: - Initializers
+
+public extension CGSize {
+    /// SwifterSwift: initialize square size.
+    /// - Parameter side: side length of a square.
+    init(side: CGFloat) {
+        self.init(width: side, height: side)
     }
 }
 
