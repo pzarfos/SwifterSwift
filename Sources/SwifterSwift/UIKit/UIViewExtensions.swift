@@ -119,6 +119,9 @@ public extension UIView {
         }
     }
 
+    /// SwifterSwift: Check if view has super view
+    var hasSuperview: Bool { superview != nil }
+
     /// SwifterSwift: Take screenshot of view (if applicable).
     var screenshot: UIImage? {
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
