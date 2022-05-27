@@ -185,7 +185,7 @@ public extension UITableView {
     /// 
     ///     let pdfFilePath = self.tableView.exportAsPdfFromTable()
     ///     print(pdfFilePath)
-    ///     
+    ///
     func exportAsPdfFromTable() -> String {
         // <https://www.swiftdevcenter.com/create-pdf-from-uiview-wkwebview-and-uitableview/>
         let originalBounds = self.bounds
