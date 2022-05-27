@@ -8,7 +8,9 @@ import CoreGraphics
 public extension CGSize {
     /// SwifterSwift: Returns the aspect ratio.
     var aspectRatio: CGFloat {
-        guard height != 0 else { return 0 }
+        guard width != .zero, height != .zero else {
+            return .zero
+        }
         return width / height
     }
 
