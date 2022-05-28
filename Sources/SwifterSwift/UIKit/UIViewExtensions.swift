@@ -620,8 +620,8 @@ public extension UIView {
         return [
             topAnchor.constraint(equalTo: view.topAnchor),
             leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            view.trailingAnchor.constraint(equalTo: trailingAnchor)
+            bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
     }
 
