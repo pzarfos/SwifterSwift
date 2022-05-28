@@ -382,6 +382,10 @@
 		22CAE01C2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
 		22CAE01D2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
 		22CAE01E2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
+		22CAE0202841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */; };
+		22CAE0212841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */; };
+		22CAE0222841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */; };
+		22CAE0232841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */; };
 		278CA08D1F9A9232004918BD /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA08C1F9A9232004918BD /* NSImageExtensions.swift */; };
 		278CA0911F9A9679004918BD /* NSImageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */; };
 		42F53FEC2039C5AC0070DC11 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */; };
@@ -845,6 +849,7 @@
 		22CAE00B28413DEB007CF73F /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtensions.swift; sourceTree = "<group>"; };
+		22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFeedbackGeneratorExtensions.swift; sourceTree = "<group>"; };
 		278CA08C1F9A9232004918BD /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensionsTests.swift; sourceTree = "<group>"; };
 		42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
@@ -1186,6 +1191,7 @@
 				9DC844A22349E1EE00E1571A /* UIColorExtensions.swift */,
 				076AEC881FDB48580077D153 /* UIDatePickerExtensions.swift */,
 				22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */,
+				22CAE01F2841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift */,
 				074EAF1A1F7BA68B00C74636 /* UIFontExtensions.swift */,
 				90693550208B4F9400407C4D /* UIGestureRecognizerExtensions.swift */,
 				07B7F1811F5EB41600E6F910 /* UIImageExtensions.swift */,
@@ -2115,6 +2121,7 @@
 				F8C1AE6F225B7F990045D5A0 /* NSRegularExpressionExtensions.swift in Sources */,
 				9D806A6F2258DE23008E500A /* SCNCylinderExtensions.swift in Sources */,
 				9D806A362258AC0D008E500A /* UIBezierPathExtensions.swift in Sources */,
+				22CAE0202841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */,
 				116090AF24187D5C00DDCD01 /* CGRectExtensions.swift in Sources */,
 				07B7F2101F5EB43C00E6F910 /* DateExtensions.swift in Sources */,
 				86B3F7AC208D3D5C00BC297B /* UIScrollViewExtensions.swift in Sources */,
@@ -2197,6 +2204,7 @@
 				22CAE00D28413DEB007CF73F /* NSObjectExtensions.swift in Sources */,
 				07B7F1A91F5EB42000E6F910 /* UIBarButtonItemExtensions.swift in Sources */,
 				07B7F1B81F5EB42000E6F910 /* UITabBarExtensions.swift in Sources */,
+				22CAE0212841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */,
 				664CB96E2171863B00FC87B4 /* BidirectionalCollectionExtensions.swift in Sources */,
 				734308082108E4630029CD16 /* CGVectorExtensions.swift in Sources */,
 				F8DED22624EAA2070068F758 /* UIScrollViewExtensions.swift in Sources */,
@@ -2289,6 +2297,7 @@
 				07B7F1D01F5EB42200E6F910 /* UITextFieldExtensions.swift in Sources */,
 				07B7F1E71F5EB43B00E6F910 /* ArrayExtensions.swift in Sources */,
 				22CAE01D2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */,
+				22CAE0222841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */,
 				D951E8AC23D04DCA00F2CD0B /* DecodableExtensions.swift in Sources */,
 				9D806A882258F624008E500A /* SCNGeometryExtensions.swift in Sources */,
 				07B7F1CC1F5EB42200E6F910 /* UIStoryboardExtensions.swift in Sources */,
@@ -2358,6 +2367,7 @@
 				07B7F1DD1F5EB43B00E6F910 /* FloatExtensions.swift in Sources */,
 				70269A2D1FB478D100C6C2D0 /* CalendarExtensions.swift in Sources */,
 				07B7F1D61F5EB43B00E6F910 /* BoolExtensions.swift in Sources */,
+				22CAE0232841D4DA007CF73F /* UIFeedbackGeneratorExtensions.swift in Sources */,
 				07B7F1DE1F5EB43B00E6F910 /* FloatingPointExtensions.swift in Sources */,
 				07B7F1DB1F5EB43B00E6F910 /* DictionaryExtensions.swift in Sources */,
 				A9AEB78820283ACD0021AACF /* FileManagerExtensions.swift in Sources */,
