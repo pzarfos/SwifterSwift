@@ -378,6 +378,10 @@
 		22CAE0122841CBA4007CF73F /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */; };
 		22CAE0132841CBA4007CF73F /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */; };
 		22CAE0142841CBA4007CF73F /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */; };
+		22CAE01B2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
+		22CAE01C2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
+		22CAE01D2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
+		22CAE01E2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */; };
 		278CA08D1F9A9232004918BD /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA08C1F9A9232004918BD /* NSImageExtensions.swift */; };
 		278CA0911F9A9679004918BD /* NSImageExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */; };
 		42F53FEC2039C5AC0070DC11 /* UIStackViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */; };
@@ -840,6 +844,7 @@
 		22CAE00628413D26007CF73F /* NSErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtensions.swift; sourceTree = "<group>"; };
 		22CAE00B28413DEB007CF73F /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		22CAE0102841CBA4007CF73F /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
+		22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerExtensions.swift; sourceTree = "<group>"; };
 		278CA08C1F9A9232004918BD /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		278CA0901F9A9679004918BD /* NSImageExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensionsTests.swift; sourceTree = "<group>"; };
 		42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtensions.swift; sourceTree = "<group>"; };
@@ -1199,6 +1204,7 @@
 				42F53FEB2039C5AC0070DC11 /* UIStackViewExtensions.swift */,
 				07B7F18A1F5EB41600E6F910 /* UIStoryboardExtensions.swift */,
 				07B7F18B1F5EB41600E6F910 /* UISwitchExtensions.swift */,
+				22CAE01A2841D2E1007CF73F /* UITabBarControllerExtensions.swift */,
 				07B7F18C1F5EB41600E6F910 /* UITabBarExtensions.swift */,
 				07B7F18D1F5EB41600E6F910 /* UITableViewExtensions.swift */,
 				07B7F18E1F5EB41600E6F910 /* UITextFieldExtensions.swift */,
@@ -2070,6 +2076,7 @@
 				07B7F19A1F5EB42000E6F910 /* UINavigationBarExtensions.swift in Sources */,
 				07B7F1941F5EB42000E6F910 /* UIButtonExtensions.swift in Sources */,
 				07B7F21B1F5EB43C00E6F910 /* URLExtensions.swift in Sources */,
+				22CAE01B2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */,
 				0782A5AF23DA985B00E562C0 /* CLLocationArrayExtensions.swift in Sources */,
 				07B7F19B1F5EB42000E6F910 /* UINavigationControllerExtensions.swift in Sources */,
 				07B7F19F1F5EB42000E6F910 /* UISliderExtensions.swift in Sources */,
@@ -2196,6 +2203,7 @@
 				07B7F1BC1F5EB42000E6F910 /* UIViewControllerExtensions.swift in Sources */,
 				F8A710EA23BF3F7300112DAD /* EdgeInsetsExtensions.swift in Sources */,
 				07B7F2371F5EB45200E6F910 /* CGSizeExtensions.swift in Sources */,
+				22CAE01C2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */,
 				07B7F1FB1F5EB43C00E6F910 /* CharacterExtensions.swift in Sources */,
 				07B7F2081F5EB43C00E6F910 /* StringExtensions.swift in Sources */,
 				07B7F2391F5EB45200E6F910 /* NSAttributedStringExtensions.swift in Sources */,
@@ -2280,6 +2288,7 @@
 				07B7F1CD1F5EB42200E6F910 /* UISwitchExtensions.swift in Sources */,
 				07B7F1D01F5EB42200E6F910 /* UITextFieldExtensions.swift in Sources */,
 				07B7F1E71F5EB43B00E6F910 /* ArrayExtensions.swift in Sources */,
+				22CAE01D2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */,
 				D951E8AC23D04DCA00F2CD0B /* DecodableExtensions.swift in Sources */,
 				9D806A882258F624008E500A /* SCNGeometryExtensions.swift in Sources */,
 				07B7F1CC1F5EB42200E6F910 /* UIStoryboardExtensions.swift in Sources */,
@@ -2415,6 +2424,7 @@
 				58253515259CF23B00407B78 /* MeasurementExtensions.swift in Sources */,
 				C7E027C72360942000F1061E /* KeyedDecodingContainerExtensions.swift in Sources */,
 				07B7F2211F5EB44600E6F910 /* CGFloatExtensions.swift in Sources */,
+				22CAE01E2841D2E1007CF73F /* UITabBarControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
