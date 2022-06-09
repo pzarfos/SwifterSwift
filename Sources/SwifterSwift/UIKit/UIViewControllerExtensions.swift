@@ -287,14 +287,17 @@ public extension UIViewController {
         // <https://www.advancedswift.com/animate-with-ios-keyboard-swift/>
         // Extract the duration of the keyboard animation
         let durationKey = UIResponder.keyboardAnimationDurationUserInfoKey
+        // swiftlint:disable:next force_cast
         let duration = notification.userInfo![durationKey] as! Double
 
         // Extract the final frame of the keyboard
         let frameKey = UIResponder.keyboardFrameEndUserInfoKey
+        // swiftlint:disable:next force_cast
         let keyboardFrameValue = notification.userInfo![frameKey] as! NSValue
 
         // Extract the curve of the iOS keyboard animation
         let curveKey = UIResponder.keyboardAnimationCurveUserInfoKey
+        // swiftlint:disable:next force_cast
         let curveValue = notification.userInfo![curveKey] as! Int
         let curve = UIView.AnimationCurve(rawValue: curveValue)!
 
