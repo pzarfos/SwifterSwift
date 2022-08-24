@@ -77,6 +77,8 @@ The changelog for **SwifterSwift**. Also see the [releases](https://github.com/S
   - Added `Array.joined(separator:)` to create a new `NSAttributedString` by concatenating the elements of the sequence, adding the given separator between each element. [#985](https://github.com/SwifterSwift/SwifterSwift/pull/985) by [Roman Podymov](https://github.com/RomanPodymov).
 - **UIButton**
   - Added `setAttributedTitleForAllStates`, `attributedTitleForDisabled`, `attributedTitleForHighlighted`, `attributedTitleForNormal` and `attributedTitleForSelected` for convenient work with attributed strings. [#1001](https://github.com/SwifterSwift/SwifterSwift/pull/1001) by [Roman Podymov](https://github.com/RomanPodymov).
+- **Digest**
+  - Added `hexString` to get a hexadecimal representation for all digest typed in `CryptoKit` (e.g. `SHA216Digest`, `SHA512Digest`,`MD5Digest`, ...). [#1026](https://github.com/SwifterSwift/SwifterSwift/pull/1026) by [Marco Eidinger](https://github.com/MarcoEidinger).
 
 ### Changed
 - **NSAttributedString**:
@@ -119,9 +121,13 @@ The changelog for **SwifterSwift**. Also see the [releases](https://github.com/S
   - Fixed a bug:UITextField `addPaddingLeftIcon` doesn't work on iOS 13[#876](https://github.com/SwifterSwift/SwifterSwift/issues/876) by [Jayxiang](https://github.com/Jayxiang)
 - **UIImage**
   - Fixed a bug:UIImage `rotated(by:)` lose origin scale, result in image blurred[#904](https://github.com/SwifterSwift/SwifterSwift/pull/904) by [yanpanpan](https://github.com/yanpanpan)
+- **UIView**
+  - Fixed `rotate(toAngle)` to rotate _to_ an angle instead of _by_ an angle, as raised in [#935](https://github.com/SwifterSwift/SwifterSwift/pull/935). [#1019](https://github.com/SwifterSwift/SwifterSwift/pull/1019) by [guykogus](https://github.com/guykogus)
 - **ColorExtension**:
   - Fixed a bug: `Color.FlatUI` can be initialized. by [Shiva Huang](https://github.com/ShivaHuang)
   - Fixed `Color.init?(hexString: String, transparency: CGFloat = 1)` was not handling uppercase `0X` in hex prefix [#947](https://github.com/SwifterSwift/SwifterSwift/pull/947) by [Zero.D.Saber](https://github.com/faimin)
+- **URLExtension**
+  - Fixed `deletingAllPathComponents()` and `deleteAllPathComponents` to handle empty paths, as raised in [#1012](https://github.com/SwifterSwift/SwifterSwift/pull/1012). [#1018](https://github.com/SwifterSwift/SwifterSwift/pull/1018) by [guykogus](https://github.com/guykogus)
 
 ### Security
 
