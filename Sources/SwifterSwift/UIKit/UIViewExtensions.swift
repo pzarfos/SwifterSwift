@@ -717,9 +717,6 @@ public extension UIView {
         anchorCenterYToSuperview()
     }
 
-<<<<<<< HEAD
-    /// SwifterSwift: Add Visual Format constraints.
-=======
     /// SwifterSwift: Search all superviews until a view with the condition is found.
     ///
     /// - Parameter predicate: predicate to evaluate on superviews.
@@ -737,9 +734,7 @@ public extension UIView {
         return ancestorView(where: { $0 is T }) as? T
     }
 
-    /// SwifterSwift: Returns all the subviews of a given type recursively in the
-    /// view hierarchy rooted on the view it its called.
->>>>>>> a28621182ddc07496f5a4a3c071c0e07f1500579
+    /// SwifterSwift: Add Visual Format constraints.
     ///
     /// - Parameters:
     ///   - withFormat: visual Format language.
