@@ -381,7 +381,7 @@ public extension UIImage {
         self.init(data: data, scale: scale)
     }
 
-    /// SwifterSwift: 生成从左到右的渐变图片
+    /// SwifterSwift: 生成从左到右的渐变图片。
     static func gradientImage(bounds: CGRect, colors: [UIColor]) -> UIImage {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds

@@ -31,7 +31,7 @@ public extension WKWebView {
 // MARK: - PDF
 
 public extension WKWebView {
-    /// SwifterSwift: Create PDF from WKWebView, Call this function when WKWebView finish loading
+    /// SwifterSwift: Create PDF from WKWebView, Call this function when WKWebView finish loading.
     ///
     ///     let pdfFilePath = self.webView.exportAsPdfFromWebView()
     ///     print(pdfFilePath)
@@ -54,7 +54,7 @@ public extension WKWebView {
         return printPageRenderer.generatePdfData()
     }
 
-    /// SwifterSwift: Save pdf file in document directory
+    /// SwifterSwift: Save pdf file in document directory.
     func saveWebViewPdf(data: NSMutableData) -> String {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let docDirectoryPath = paths[0]

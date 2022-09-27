@@ -23,7 +23,7 @@ public extension UIDevice {
 import AudioToolbox
 
 public extension UIDevice {
-    /// SwifterSwift: 一行代码实现系统振动反馈提示
+    /// SwifterSwift: 一行代码实现系统振动反馈提示。
     ///
     ///     UIDevice.vibrate()
     ///

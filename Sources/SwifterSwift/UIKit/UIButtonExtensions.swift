@@ -168,7 +168,7 @@ public extension UIButton {
         self.backgroundColor = backgroundColor
     }
 
-    /// SwifterSwift: add Padding in button
+    /// SwifterSwift: add Padding in button.
     ///
     ///     class PaddedButton: UIButton {
     ///        override var intrinsicContentSize: CGSize {

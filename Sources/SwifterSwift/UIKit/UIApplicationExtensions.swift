@@ -64,7 +64,7 @@ public extension UIApplication {
         return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
     }
 
-    /// SwifterSwift: App's current bundle identifier
+    /// SwifterSwift: App's current bundle identifier.
     var bundleIdentifier: String? { Bundle.main.bundleIdentifier }
 
     /// SwifterSwift: Open OS System 'Settings' application.

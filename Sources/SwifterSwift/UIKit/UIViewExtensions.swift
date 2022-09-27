@@ -50,7 +50,7 @@ public extension UIView {
         case easeInOut
     }
 
-    /// SwifterSwift: Apply gradient directions
+    /// SwifterSwift: Apply gradient directions.
     enum GradientDirection {
         case topToBottom
         case bottomToTop
@@ -202,7 +202,7 @@ public extension UIView {
         }
     }
 
-    /// SwifterSwift: Get view's parent view controller
+    /// SwifterSwift: Get view's parent view controller.
     var parentViewController: UIViewController? {
         weak var parentResponder: UIResponder? = self
         while parentResponder != nil {
@@ -224,7 +224,7 @@ public extension UIView {
         return effectiveUserInterfaceLayoutDirection == .leftToRight
     }
 
-    /// SwifterSwift: Check if view has super view
+    /// SwifterSwift: Check if view has super view.
     var hasSuperview: Bool { superview != nil }
 
     /// SwifterSwift: Take screenshot of view (if applicable).

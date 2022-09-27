@@ -3,7 +3,7 @@
 #if canImport(UIKit) && os(iOS)
 import UIKit
 
-/// 触觉反馈
+/// SwifterSwift: 触觉反馈
 public extension UIFeedbackGenerator {
     enum Style {
         case light
